@@ -23,7 +23,7 @@ rm -rf bzip2
 rm -rf ffmpeg
 
 if [ ! -d "$SRCDIR" ]; then
-    git clone https://github.com/discord/lilliput-dep-source "$SRCDIR"
+    git clone https://github.com/deadulya/lilliput-dep-source-patched "$SRCDIR"
 fi
 
 echo '\n--------------------'
@@ -88,7 +88,7 @@ echo '\n--------------------'
 echo 'Building opencv'
 echo '--------------------\n'
 mkdir -p $BASEDIR/opencv
-tar -xzf $SRCDIR/opencv-3.2.0.tar.gz -C $BASEDIR/opencv --strip-components 1
+tar -xzf $SRCDIR/opencv-4.8.1.tar.gz -C $BASEDIR/opencv --strip-components 1
 cd $BASEDIR/opencv
 patch -p1 < $SRCDIR/0001-export-exif-orientation.patch
 mkdir -p $BUILDDIR/opencv
