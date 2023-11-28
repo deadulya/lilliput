@@ -1,1 +1,1 @@
-package lilliput // import "github.com/deadulya/lilliput-mark"
+package lilliput // import "github.com/deadulya/lilliput"
